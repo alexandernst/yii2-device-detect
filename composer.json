@@ -1,0 +1,22 @@
+{
+	"name": "alexandernst/yii2-device-detect",
+	"description": "Yii2 extension for Mobile-Detect library",
+	"type": "yii2-extension",
+	"keywords": ["yii2","extension","widget","device","detect","mobile","phone","tablet","desktop"],
+	"license": "GNU General Public License v3",
+	"authors": [
+		{
+			"name": "Alexander Nestorov",
+			"email": "alexandernst@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"alexandernst\\devicedetect\\": ""
+		}
+	},
+	"require": {
+		"yiisoft/yii2": "*",
+		"mobiledetect/mobiledetectlib": "2.8.12"
+	}
+}
