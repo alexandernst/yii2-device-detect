@@ -12,7 +12,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"alexandernst\\devicedetect\\": ""
+			"alexandernst\\yii2-device-detect\\": ""
 		}
 	},
 	"require": {

@@ -12,7 +12,7 @@ use Detection\MobileDetect;
  * @version 0.0.1
  */
 
-class Component extends \yii\base\Component {
+class DeviceDetect extends \yii\base\Component {
 
 	private $_mobileDetect;
 
