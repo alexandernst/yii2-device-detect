@@ -18,7 +18,7 @@ And then add it to your components configuration in Yii2:
 ]
 ~~~
 
-You can use it from anywhere in your code, calling Mobil-Detect's API:
+You can use it from anywhere in your code, calling Mobile-Detect's API:
 
 ~~~php
 /*Detect a mobile device*/
