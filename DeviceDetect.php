@@ -9,7 +9,7 @@ use Detection\MobileDetect;
  * DeviceDetect
  *
  * @author Alexander Nestorov <alexandernst@gmail.com>
- * @version 0.0.4
+ * @version 0.0.5
  */
 
 class DeviceDetect extends \yii\base\Component {
