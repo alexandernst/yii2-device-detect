@@ -9,7 +9,7 @@ use Detection\MobileDetect;
  * DeviceDetect
  *
  * @author Alexander Nestorov <alexandernst@gmail.com>
- * @version 0.0.1
+ * @version 0.0.4
  */
 
 class DeviceDetect extends \yii\base\Component {
@@ -28,7 +28,7 @@ class DeviceDetect extends \yii\base\Component {
 	}
 
 	public function init() {
-		$this->_mobileDetect = new Mobile_Detect();
+		$this->_mobileDetect = new MobileDetect();
 		parent::init();
 	}
 
