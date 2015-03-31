@@ -11,6 +11,7 @@ To use it just require this library in your `composer.json` file:
 And then add it to your components configuration in Yii2:
 
 ~~~php
+'bootstrap' => ['devicedetect],
 'components' => [
 	'devicedetect' => [
 		'class' => 'alexandernst\devicedetect\DeviceDetect'
