@@ -18,7 +18,18 @@ And then add it to your components configuration in Yii2:
 ]
 ~~~
 
-You can use it from anywhere in your code, calling Mobile-Detect's API:
+Some basic detections are available in Yii's `params`:
+
+~~~php
+var_dump(Yii::$app->params['devicedetect']);
+
+array (size=3)
+  'isMobile' => boolean false
+  'isTablet' => boolean false
+  'isDesktop' => boolean true
+~~~
+
+You can also use it from anywhere in your code, calling Mobile-Detect's API:
 
 ~~~php
 /*Detect a mobile device*/
@@ -26,4 +37,7 @@ You can use it from anywhere in your code, calling Mobile-Detect's API:
 
 /*Detect a tablet device*/
 \Yii::$app->devicedetect->isTablet();
+
+/*Check all available methods here: http://demo.mobiledetect.net/ */
 ~~~
+
