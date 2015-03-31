@@ -30,6 +30,17 @@ class DeviceDetect extends \yii\base\Component {
 	public function init() {
 		$this->_mobileDetect = new MobileDetect();
 		parent::init();
+		
+		\Yii::$app->on(\yii\base\Application::EVENT_BEFORE_ACTION, function($event){
+			\Yii::$app->params['devicedetect'] = [
+				'isMobile' => \Yii::$app->devicedetect->isMobile(),
+				'isTablet' => \Yii::$app->devicedetect->isTablet()
+			];
+
+			\Yii::$app->params['devicedetect']['isDesktop'] =
+				!\Yii::$app->params['devicedetect']['isMobile'] &&
+				!\Yii::$app->params['devicedetect']['isTablet'];
+		});
 	}
 
 }
