@@ -2,7 +2,7 @@
 
 Yii2 extension for [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect) library.
 
-To use it just require this library in your `composer.json` file:
+To use it just require this extension in your `composer.json` file:
 
 ~~~
 "alexandernst/yii2-device-detect": "0.0.8",
