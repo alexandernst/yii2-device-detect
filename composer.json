@@ -17,6 +17,6 @@
 	},
 	"require": {
 		"yiisoft/yii2": "*",
-		"mobiledetect/mobiledetectlib": "2.8.12"
+		"mobiledetect/mobiledetectlib": "~2.8"
 	}
 }
