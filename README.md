@@ -5,7 +5,7 @@ Yii2 extension for [Mobile-Detect](https://github.com/serbanghita/Mobile-Detect)
 To use it just require this extension in your `composer.json` file:
 
 ~~~
-"alexandernst/yii2-device-detect": "0.0.8",
+"alexandernst/yii2-device-detect": "0.0.9",
 ~~~
 
 And then add it to your components configuration in Yii2:
