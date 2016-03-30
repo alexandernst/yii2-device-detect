@@ -9,7 +9,7 @@ use Detection\MobileDetect;
  * DeviceDetect
  *
  * @author Alexander Nestorov <alexandernst@gmail.com>
- * @version 0.0.8
+ * @version 0.0.9
  */
 
 class DeviceDetect extends \yii\base\Component {
@@ -35,16 +35,22 @@ class DeviceDetect extends \yii\base\Component {
 		parent::init();
 
 		if ($this->setParams)
-			\Yii::$app->on(\yii\base\Application::EVENT_BEFORE_REQUEST, function($event){
-				\Yii::$app->params['devicedetect'] = [
-					'isMobile' => \Yii::$app->devicedetect->isMobile(),
-					'isTablet' => \Yii::$app->devicedetect->isTablet()
-				];
+			\Yii::$app->params['devicedetect'] = [
+				'isMobile' => $this->_mobileDetect->isMobile(),
+				'isTablet' => $this->_mobileDetect->isTablet()
+			];
 
-				\Yii::$app->params['devicedetect']['isDesktop'] =
-					!\Yii::$app->params['devicedetect']['isMobile'] &&
-					!\Yii::$app->params['devicedetect']['isTablet'];
-			});
+			\Yii::$app->params['devicedetect']['isDesktop'] =
+				!\Yii::$app->params['devicedetect']['isMobile'] &&
+				!\Yii::$app->params['devicedetect']['isTablet'];
+
+			if (\Yii::$app->params['devicedetect']['isMobile']) {
+					\Yii::setAlias('@device', 'mobile');
+			} else if (\Yii::$app->params['devicedetect']['isTablet']) {
+					\Yii::setAlias('@device', 'tablet');
+			} else {
+					\Yii::setAlias('@device', 'desktop');
+			}
 	}
 
 }

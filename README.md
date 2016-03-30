@@ -42,3 +42,9 @@ You can also use it from anywhere in your code, calling Mobile-Detect's API:
 /*Check all available methods here: http://demo.mobiledetect.net/ */
 ~~~
 
+Or using the an alias:
+
+~~~php
+\Yii::getAlias('@device'); //return 'mobile', 'tablet' or 'desktop'.
+~~~
+
