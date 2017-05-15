@@ -9,8 +9,8 @@ use Detection\MobileDetect;
  * DeviceDetect
  *
  * @author Alexander Nestorov <alexandernst@gmail.com>
- * @method static DeviceDetect isMobile()
- * @method static DeviceDetect isTablet()
+ * @method DeviceDetect isMobile()
+ * @method DeviceDetect isTablet()
  * @version 0.0.10
  */
 
