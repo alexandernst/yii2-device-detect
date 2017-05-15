@@ -9,11 +9,16 @@ use Detection\MobileDetect;
  * DeviceDetect
  *
  * @author Alexander Nestorov <alexandernst@gmail.com>
+ * @method DeviceDetect isMobile()
+ * @method DeviceDetect isTablet()
  * @version 0.0.10
  */
 
 class DeviceDetect extends \yii\base\Component {
 
+	/**
+	* @var MobileDetect
+	*/
 	private $_mobileDetect;
 
 	// Automatically set view parameters based on device type
