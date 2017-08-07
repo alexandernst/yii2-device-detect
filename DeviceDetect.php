@@ -11,7 +11,7 @@ use Detection\MobileDetect;
  * @author Alexander Nestorov <alexandernst@gmail.com>
  * @method DeviceDetect isMobile()
  * @method DeviceDetect isTablet()
- * @version 0.0.10
+ * @version 0.0.12
  */
 
 class DeviceDetect extends \yii\base\Component {
