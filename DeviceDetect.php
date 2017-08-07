@@ -15,7 +15,6 @@ use Detection\MobileDetect;
  */
 
 class DeviceDetect extends \yii\base\Component {
-
 	/**
 	* @var MobileDetect
 	*/
@@ -44,24 +43,20 @@ class DeviceDetect extends \yii\base\Component {
 
 		if ($this->setParams) {
 			\Yii::$app->params['devicedetect'] = [
-				'isMobile' => $this->_mobileDetect->isMobile(),
-				'isTablet' => $this->_mobileDetect->isTablet()
+				'isMobile' => $this->_mobileDetect->isMobile() && !$this->_mobileDetect->isTablet(),
+				'isTablet' => $this->_mobileDetect->isTablet() && !$this->_mobileDetect->isMobile(),
+				'isDesktop' => !$this->_mobileDetect->isTablet() && !$this->_mobileDetect->isMobile(),
 			];
-
-			\Yii::$app->params['devicedetect']['isDesktop'] =
-				!\Yii::$app->params['devicedetect']['isMobile'] &&
-				!\Yii::$app->params['devicedetect']['isTablet'];
 		}
 
 		if ($this->setAlias) {
 			if ($this->_mobileDetect->isMobile()) {
-					\Yii::setAlias('@device', 'mobile');
+				\Yii::setAlias('@device', 'mobile');
 			} else if ($this->_mobileDetect->isTablet()) {
-					\Yii::setAlias('@device', 'tablet');
+				\Yii::setAlias('@device', 'tablet');
 			} else {
-					\Yii::setAlias('@device', 'desktop');
+				\Yii::setAlias('@device', 'desktop');
 			}
 		}
 	}
-
 }
