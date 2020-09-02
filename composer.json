@@ -3,7 +3,7 @@
 	"description": "Yii2 extension for Mobile-Detect library",
 	"type": "yii2-extension",
 	"keywords": ["yii2","extension","widget","device","detect","mobile","phone","tablet","desktop"],
-	"license": "GNU General Public License v3",
+	"license": "MIT License",
 	"authors": [
 		{
 			"name": "Alexander Nestorov",
